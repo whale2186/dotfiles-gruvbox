@@ -1,0 +1,206 @@
+
+/* 
+Dracula theme base colors:
+@define-color bg_main rgba(40, 42, 54, 0.65);          Background color
+@define-color bg_main_tooltip rgba(68, 71, 90, 0.7);    Tooltip background
+@define-color bg_hover rgba(98, 114, 164, 0.3);         Hover background
+@define-color bg_active rgba(139, 233, 253, 0.2);       Active elements background
+@define-color border_main rgba(248, 248, 242, 0.2);     Border color
+@define-color content_main #f8f8f2;                     Primary text color
+@define-color content_inactive rgba(248, 248, 242, 0.25); Inactive text color
+@define-color warning_color #ffb86c;                    Warning color
+*/
+
+
+/* Gruvbox theme base colors */
+@define-color bg_main rgba(40, 40, 40, 0.65);           /* Background color */
+@define-color bg_main_tooltip rgba(60, 56, 54, 0.7);    /* Tooltip background */
+@define-color bg_hover rgba(146, 131, 116, 0.3);        /* Hover background */
+@define-color bg_active rgba(214, 93, 14, 0.2);         /* Active elements background */
+@define-color border_main rgba(189, 174, 147, 0.2);     /* Border color */
+@define-color content_main #ebdbb2;                     /* Primary text color */
+@define-color content_inactive rgba(189, 174, 147, 0.25); /* Inactive text color */
+@define-color warning_color #fe8019;                    /* Warning color */
+@define-color accent_yellow     #fabd2f;
+@define-color accent_orange     #fe8019;
+@define-color accent_red        #fb4934;
+@define-color accent_green      #b8bb26;
+@define-color accent_blue       #83a598;
+@define-color accent_purple  #d3869b;
+@define-color accent_aqua    #8ec07c;
+@define-color accent_gray    #928374;
+@define-color accent_brown   #a87322;
+
+* {
+	text-shadow: none;
+	box-shadow: none;
+	border: none;
+	border-radius: 0;
+	font-family: "JetBrainsMono Nerd Font";
+	font-weight: 600;
+  font-size: 13px;
+	margin-bottom: 0px;
+}
+
+window#waybar {
+	background: @bg_main;
+	color: @content_main;
+}
+
+
+tooltip {
+	background: @bg_main_tooltip;
+	border-radius: 5px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: @border_main;
+}
+tooltip label {
+	color: @content_main;
+}
+
+#custom-os_button {
+	font-size: 24px;
+	padding-left: 12px;
+	padding-right: 20px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: @accent_blue;
+}
+
+
+#workspaces {
+	color: transparent;
+	margin-right: 1.5px;
+	margin-left: 1.5px;
+}
+#workspaces button {
+	padding: 3px;
+	color: @content_inactive;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#workspaces button.active {
+	color: @accent_yellow;
+	border-bottom: 2px solid @accent_green; /* Light purple for active workspace */
+}
+#workspaces button.focused {
+	color: @bg_active;
+}
+#workspaces button.urgent {
+	background: rgba(255, 184, 108, 0.35); /* Orange for urgent workspaces */
+	border-bottom: 3px dashed @warning_color;
+	color: @warning_color;
+}
+#workspaces button:hover {
+	background: @bg_hover;
+	color: @content_main;
+}
+
+
+
+#taskbar button {
+	border-bottom: 3px solid rgba(189, 174, 147, 0.3); /* Neutral border color */
+	margin-left: 2px;
+	margin-right: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	color: @content_main; /* Light text color */
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#taskbar button.active {
+	border-bottom: 3px solid #d79921; /* Gruvbox yellow for active task */
+	background: @bg_active; /* Active background color */
+}
+
+#taskbar button:hover {
+	border-bottom: 3px solid #d65d0e; /* Gruvbox orange for hover effect */
+	background: @bg_hover; /* Hover background color */
+	color: @content_main; /* Light text color */
+}
+#cpu, #disk, #memory {
+	padding: 3px;
+}
+#cpu
+#temperature {
+	color: transparent;
+	font-size: 0px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#temperature.critical {
+	padding-right: 3px;
+	color: @warning_color;
+	font-size: initial;
+	border-bottom: 3px dashed @warning_color;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#window {
+	border-radius: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#tray {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#tray > .passive {
+	border-bottom: none;
+}
+/*
+#tray > .active {
+	border-bottom: 3px solid #d79921; 
+}
+
+#tray > .needs-attention {
+	border-bottom: 3px solid #fe8019; 
+}
+*/
+
+#tray > widget {
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#tray > widget:hover {
+	background: @bg_hover; /* Gruvbox hover background color */
+}
+
+
+#pulseaudio {
+  padding-left: 3px;
+	padding-right: 10px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#pulseaudio:hover {
+	background: @bg_hover;
+}
+
+#network {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+#language {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#clock {
+	padding-right: 5px;
+	padding-left: 0px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#clock:hover {
+	background: @bg_hover;
+}
+
+#custom-swaync, #custom-pacman {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#custom-mediaplay, #custom-mediaprevious, #custom-medianext{
+  padding: 5px;
+  font-size: 15px;
+}
