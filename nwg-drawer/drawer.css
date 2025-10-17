@@ -1,0 +1,46 @@
+/* Window Background and Text */
+window {
+    background-color: rgba(24, 26, 30, 0.75); /* Darker neutral background */
+    color: #ebdbb2; /* Gruvbox light text */
+}
+
+/* Search Entry */
+entry {
+    background-color: rgba(73, 73, 73, 0.2); /* Gruvbox darker gray background */
+}
+
+/* Button and Image */
+button, image {
+    background: none;
+    border: none;
+}
+
+/* Hover Effect for Buttons */
+button:hover {
+    background-color: rgba(250, 204, 33, 0.1); /* Gruvbox yellow hover */
+}
+
+/* Category Button Styling */
+#category-button {
+    margin: 0 10px 0 10px;
+}
+
+/* Pinned Box Styling */
+#pinned-box {
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #d79921; /* Gruvbox yellow border */
+}
+
+/* Files Box Styling */
+#files-box {
+    padding: 5px;
+    border: 1px dotted #928374; /* Gruvbox gray border */
+    border-radius: 15px;
+}
+
+/* Math Operation Result Label */
+#math-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fb4934; /* Gruvbox red for emphasis */
+}
